@@ -19,7 +19,7 @@ class M_profil extends CI_Model{
 		$password = $this->input->post('password');
 
 		$sql = "CALL sp_ganti_password(?,?)";
-		$query = $this->db->query($sql, array($password, $id));
+		$query = $this->db->query($sql, array($id, $password));
 	}
 
 	function ubah_profil(){
