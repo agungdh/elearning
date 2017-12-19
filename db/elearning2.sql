@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 18, 2017 at 07:22 AM
+-- Generation Time: Dec 19, 2017 at 05:59 AM
 -- Server version: 10.1.25-MariaDB
 -- PHP Version: 5.6.31
 
@@ -410,6 +410,43 @@ END IF;
 UPDATE kelas
 SET selesai = v_status_selesai_next
 WHERE id = p_id;
+
+END$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_ubah_user` (IN `p_id` INT, IN `p_nama` INT)  NO SQL
+BEGIN
+
+declare v_level int(11);
+declare v_id int(11);
+
+select level from user
+where id = p_id into v_level;
+
+IF v_level = 1 THEN
+    SELECT id
+    FROM siswa
+    WHERE id_user = p_id
+    INTO v_id;
+    UPDATE siswa
+    SET nama = p_nama
+    WHERE id = v_id;
+ELSEIF v_level = 2 THEN
+    SELECT id
+    FROM guru
+    WHERE id_user = p_id
+    INTO v_id;
+	UPDATE guru
+    SET nama = p_nama
+    WHERE id = v_id;
+ELSEIF v_level = 4 THEN
+	SELECT id
+    FROM admin
+    WHERE id_user = p_id
+    INTO v_id;
+    UPDATE admin
+    SET nama = p_nama
+    WHERE id = v_id;
+END IF;
 
 END$$
 
@@ -1118,7 +1155,7 @@ INSERT INTO `kelas` (`id`, `id_angkatan`, `id_guru`, `id_mapel`, `kelas`, `seles
 (11, 8, 2, 18, 'Alir TKJ 1 A', 0),
 (12, 8, 2, 18, 'Alir TKJ 1 B', 0),
 (13, 8, 2, 17, 'Etimologi Multimedia 1 A', 0),
-(14, 8, 2, 18, 'Etimologi Multimedia 1 B', 0),
+(14, 8, 2, 18, 'Etimologi Multimedia 1 B', 1),
 (15, 8, 5, 16, 'PPC 1A', 0),
 (16, 8, 5, 16, 'PPC 1B', 0),
 (17, 8, 6, 14, 'PPM 1A', 0),
@@ -1221,7 +1258,8 @@ INSERT INTO `ujian` (`id`, `id_kelas`, `id_siswa`, `waktu_ujian`, `nilai`) VALUE
 (15, 17, 18, '2017-12-07 10:22:16', 0.00),
 (16, 12, 18, '2017-12-08 08:56:56', 10.00),
 (17, 17, 16, '2017-12-09 13:29:10', 0.00),
-(18, 19, 18, '2017-12-11 10:41:13', 0.00);
+(18, 19, 18, '2017-12-11 10:41:13', 0.00),
+(19, 19, 16, '2017-12-19 07:34:16', 30.00);
 
 -- --------------------------------------------------------
 
@@ -1290,7 +1328,17 @@ INSERT INTO `ujian_soal` (`id`, `id_ujian`, `id_banksoal`, `id_jawaban`) VALUES
 (207, 18, 205, NULL),
 (208, 18, 199, NULL),
 (209, 18, 202, NULL),
-(210, 18, 209, NULL);
+(210, 18, 209, NULL),
+(211, 19, 196, 778),
+(212, 19, 210, 834),
+(213, 19, 205, 813),
+(214, 19, 202, NULL),
+(215, 19, 204, 811),
+(216, 19, 208, NULL),
+(217, 19, 201, NULL),
+(218, 19, 209, 832),
+(219, 19, 203, 805),
+(220, 19, 206, 817);
 
 -- --------------------------------------------------------
 
@@ -1755,7 +1803,7 @@ ALTER TABLE `banksoal`
 -- AUTO_INCREMENT for table `detil_kelas`
 --
 ALTER TABLE `detil_kelas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=88;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=93;
 --
 -- AUTO_INCREMENT for table `guru`
 --
@@ -1770,7 +1818,7 @@ ALTER TABLE `jawaban_banksoal`
 -- AUTO_INCREMENT for table `kelas`
 --
 ALTER TABLE `kelas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 --
 -- AUTO_INCREMENT for table `mapel`
 --
@@ -1785,12 +1833,12 @@ ALTER TABLE `siswa`
 -- AUTO_INCREMENT for table `ujian`
 --
 ALTER TABLE `ujian`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 --
 -- AUTO_INCREMENT for table `ujian_soal`
 --
 ALTER TABLE `ujian_soal`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=211;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=226;
 --
 -- AUTO_INCREMENT for table `user`
 --
