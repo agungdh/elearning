@@ -36,8 +36,8 @@
             <th><?php echo $item->kelas; ?></th>
             <th><?php echo $item->mata_pelajaran; ?></th>
             <th><?php echo $item->semester; ?></th>
-            <th><?php echo $item->waktu_ujian; ?></th>
-            <th><?php echo $item->nilai; ?></th>
+            <td><?php echo $this->pustaka->tanggal_indo($item->waktu_ujian) ?></td>
+            <td><?php echo $this->pustaka->dec_to_int($item->nilai) ?></td>
           </tr>
           <?php
           $i++;

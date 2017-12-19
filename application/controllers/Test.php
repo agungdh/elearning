@@ -7,6 +7,14 @@ class Test extends CI_Controller {
 	}
 
 	function index() {
+		// echo "cinta";
+		$this->load->library('pustaka');
+		echo $this->pustaka->tanggal_indo('1997-03-25 23:40:30');
+		echo "<br>";
+		echo $this->pustaka->dec_to_int('10.10');
+	}
+
+	function index_bak() {
 		?>
 		<!DOCTYPE html>
 		<html>

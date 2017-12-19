@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 19, 2017 at 05:59 AM
+-- Generation Time: Dec 19, 2017 at 07:56 AM
 -- Server version: 10.1.25-MariaDB
 -- PHP Version: 5.6.31
 
@@ -413,7 +413,7 @@ WHERE id = p_id;
 
 END$$
 
-CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_ubah_user` (IN `p_id` INT, IN `p_nama` INT)  NO SQL
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_ubah_user` (IN `p_id` INT, IN `p_nama` VARCHAR(255))  NO SQL
 BEGIN
 
 declare v_level int(11);
@@ -1803,7 +1803,7 @@ ALTER TABLE `banksoal`
 -- AUTO_INCREMENT for table `detil_kelas`
 --
 ALTER TABLE `detil_kelas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=93;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=88;
 --
 -- AUTO_INCREMENT for table `guru`
 --
@@ -1818,7 +1818,7 @@ ALTER TABLE `jawaban_banksoal`
 -- AUTO_INCREMENT for table `kelas`
 --
 ALTER TABLE `kelas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 --
 -- AUTO_INCREMENT for table `mapel`
 --
@@ -1838,7 +1838,7 @@ ALTER TABLE `ujian`
 -- AUTO_INCREMENT for table `ujian_soal`
 --
 ALTER TABLE `ujian_soal`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=226;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=221;
 --
 -- AUTO_INCREMENT for table `user`
 --

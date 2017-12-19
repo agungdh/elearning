@@ -27,7 +27,7 @@ class M_profil extends CI_Model{
 		$nama = $this->input->post('nama');
 
 		$sql = "CALL sp_ubah_user(?,?)";
-		$query = $this->db->query($sql, array($nama, $id));	
+		$query = $this->db->query($sql, array($id, $nama));	
 
 		return $nama;
 	}

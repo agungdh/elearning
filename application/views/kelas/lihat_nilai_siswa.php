@@ -38,8 +38,8 @@
             <td><?php echo $i; ?></td>
             <td><?php echo $item->nama ?></td>
             <td><?php echo $item->nis ?></td>
-            <td><?php echo $item->waktu_ujian ?></td>
-            <td><?php echo $item->nilai ?></td>
+            <td><?php echo $this->pustaka->tanggal_indo($item->waktu_ujian) ?></td>
+            <td><?php echo $this->pustaka->dec_to_int($item->nilai) ?></td>
           </tr>
           <?php
           $i++;
