@@ -39,7 +39,7 @@
             <th><?php echo $i; ?></th>
             <th><?php echo $item->nis ?></th>
             <th><?php echo $item->nama; ?></th>
-            <th><a onclick="konfirmasi(<?php echo $item->id_detil_kelas; ?>)">Hapus</a></th>
+            <th><a class="btn btn-danger" onclick="konfirmasi(<?php echo $item->id_detil_kelas; ?>)">Hapus</a></th>
           </tr>
           <?php
           $i++;

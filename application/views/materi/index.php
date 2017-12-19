@@ -39,7 +39,7 @@
             <th><?php echo $item->mapel; ?></th>
             <th><?php echo $item->semester; ?></th>
             <th><?php echo $item->nama_guru; ?></th>
-              <th><a href="<?php echo base_url('materi/lihat/'.$item->id_mapel) ?>">Lihat</a> <a href="<?php echo base_url('banksoal/mapel/'.$item->id_mapel) ?>">Bank Soal</a></th>
+              <th><a class="btn btn-success" href="<?php echo base_url('materi/lihat/'.$item->id_mapel) ?>">Lihat</a> <a class="btn btn-success" href="<?php echo base_url('banksoal/mapel/'.$item->id_mapel) ?>">Bank Soal</a></th>
           </tr>
           <?php
           $i++;

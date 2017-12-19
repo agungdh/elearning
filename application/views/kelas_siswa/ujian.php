@@ -20,7 +20,7 @@
           ?>
 
         <h3>Anda belum mengikuti ujian sama sekali</h3>
-        <h3><a onclick="konfirmasi(<?php echo $data['id_kelas']; ?>, <?php echo $data['id_siswa']; ?>)">Ujian</a></h3>
+        <h3><a class="btn btn-success" onclick="konfirmasi(<?php echo $data['id_kelas']; ?>, <?php echo $data['id_siswa']; ?>)">Ujian</a></h3>
       <a href='<?php echo base_url("kelas_siswa"); ?>'><button class="btn btn-success">Kembali</button></a>
     </div>
 

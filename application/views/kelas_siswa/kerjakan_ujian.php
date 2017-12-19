@@ -41,8 +41,8 @@ var x = setInterval(function() {
  	?>
  	Ujian akan dikumpulkan dan tidak dapat diubah lagi.
  	<br>
-	<a href="<?php echo base_url("kelas_siswa/ujian/".$id_kelas) ?>">Kembali</a> 
-	<a onclick="kumpul()">Kumpulkan</a>
+	<a class="btn btn-success" href="<?php echo base_url("kelas_siswa/ujian/".$id_kelas) ?>">Kembali</a> 
+	<a class="btn btn-danger" onclick="kumpul()">Kumpulkan</a>
 	<script type="text/javascript">
 	function kumpul() {
 	  if (confirm("Koreksi kembali soal yang telah dikerjakan !!!\nApakah anda yakin untuk mengumpulkan ?")) {
@@ -82,7 +82,7 @@ var x = setInterval(function() {
 	}
 	?>
 <br>
-<input type="submit" name="simpan" value="Simpan">
+<input class="btn btn-success" type="submit" name="simpan" value="Simpan">
 </form>
 
 <br>
@@ -114,7 +114,7 @@ echo $no['7'] . ' | ' . $no['8'] . ' | ' . $no['9'];
 echo "<br>";
 echo $kembali . ' | ' . $no['10'] . ' | ' . $lanjut;
 echo "<br>";
-echo '<a style="color: black" onclick="konfirmasi()">Selesai</a>';
+echo '<a class="btn btn-danger" style="color: black" onclick="konfirmasi()">Selesai</a>';
 ?>
 
 <script type="text/javascript">

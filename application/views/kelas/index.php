@@ -52,7 +52,7 @@
             <th><a target="_blank" href="<?php echo base_url('materi/lihat/'.$item->id_mapel); ?>"><?php echo $item->mata_pelajaran; ?></a></th>
             <th><?php echo $item->nama_kelas; ?></th>
             <th><?php echo $this->m_kelas->cek_jumlah_siswa($item->id_kelas); ?></th>
-              <th><a href="<?php echo base_url('kelas/lihat_siswa/'.$item->id_kelas) ?>">Lihat Siswa</a> <a href="<?php echo base_url('kelas/lihat_nilai_siswa/'.$item->id_kelas) ?>">Lihat Nilai Siswa</a> <a href="<?php echo base_url('kelas/ubah_status/'.$item->id_kelas) ?>">Ubah Status</a> <a onclick="konfirmasi(<?php echo $item->id_kelas; ?>)">Hapus</a> </th>
+              <th><a class="btn btn-success" href="<?php echo base_url('kelas/lihat_siswa/'.$item->id_kelas) ?>">Lihat Siswa</a> <a class="btn btn-success" href="<?php echo base_url('kelas/lihat_nilai_siswa/'.$item->id_kelas) ?>">Lihat Nilai Siswa</a> <a class="btn btn-primary" href="<?php echo base_url('kelas/ubah_status/'.$item->id_kelas) ?>">Ubah Status</a> <a class="btn btn-danger" onclick="konfirmasi(<?php echo $item->id_kelas; ?>)">Hapus</a> </th>
           </tr>
           <?php
           $i++;
@@ -97,7 +97,7 @@
             <th><a target="_blank" href="<?php echo base_url('materi/lihat/'.$item->id_mapel); ?>"><?php echo $item->mata_pelajaran; ?></a></th>
             <th><?php echo $item->nama_kelas; ?></th>
             <th><?php echo $this->m_kelas->cek_jumlah_siswa($item->id_kelas); ?></th>
-              <th><a href="<?php echo base_url('kelas/lihat_siswa/'.$item->id_kelas) ?>">Lihat Siswa</a> <a href="<?php echo base_url('kelas/lihat_nilai_siswa/'.$item->id_kelas) ?>">Lihat Nilai Siswa</a> <a href="<?php echo base_url('kelas/ubah_status/'.$item->id_kelas) ?>">Ubah Status</a> <a onclick="konfirmasi(<?php echo $item->id_kelas; ?>)">Hapus</a></th>
+              <th><a class="btn btn-success" href="<?php echo base_url('kelas/lihat_siswa/'.$item->id_kelas) ?>">Lihat Siswa</a> <a class="btn btn-success" href="<?php echo base_url('kelas/lihat_nilai_siswa/'.$item->id_kelas) ?>">Lihat Nilai Siswa</a> <a class="btn btn-primary" href="<?php echo base_url('kelas/ubah_status/'.$item->id_kelas) ?>">Ubah Status</a> <a class="btn btn-danger" onclick="konfirmasi(<?php echo $item->id_kelas; ?>)">Hapus</a></th>
           </tr>
           <?php
           $i++;

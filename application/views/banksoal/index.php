@@ -62,7 +62,7 @@
                 }
               ?>
             </td>
-              <td><a href="<?php echo base_url('banksoal/ubah_soal/'.$item->id_banksoal) ?>">Ubah</a> <a onclick="konfirmasi(<?php echo $item->id_banksoal; ?>)">Hapus</a></td>
+              <td><a class="btn btn-success" href="<?php echo base_url('banksoal/ubah_soal/'.$item->id_banksoal) ?>">Ubah</a> <a class="btn btn-danger" onclick="konfirmasi(<?php echo $item->id_banksoal; ?>)">Hapus</a></td>
           </tr>
           <?php
           $i++;

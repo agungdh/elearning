@@ -46,7 +46,7 @@
             <th><a target="_blank" href="<?php echo base_url('materi/lihat/'.$item->id_mapel); ?>"><?php echo $item->mata_pelajaran; ?></a></th>
             <th><?php echo $item->kelas; ?></th>
             <th><?php echo $item->nama_guru; ?></th>
-              <th><a href="<?php echo base_url('kelas_siswa/ujian/'.$item->id_kelas) ?>">Ujian</a></th>
+              <th><a class="btn btn-success" href="<?php echo base_url('kelas_siswa/ujian/'.$item->id_kelas) ?>">Ujian</a></th>
           </tr>
           <?php
           $i++;
