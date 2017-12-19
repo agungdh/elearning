@@ -37,7 +37,7 @@
             <th><?php echo $i; ?></th>
             <th><?php echo $item->username; ?></th>
             <th><?php echo $item->nama; ?></th>
-            <th><a href="<?php echo base_url('admin/ubah/'.$item->id_admin) ?>">Ubah</a></th>
+            <th><a class="btn btn-success" href="<?php echo base_url('admin/ubah/'.$item->id_admin) ?>">Ubah</a></th>
           </tr>
           <?php
           $i++;

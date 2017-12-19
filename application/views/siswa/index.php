@@ -41,7 +41,7 @@
             <th><?php echo $item->nis; ?></th>
             <th><?php echo $item->nama; ?></th>
             <th><?php echo $item->angkatan; ?></th>
-            <th><a href="<?php echo base_url('siswa/ubah/'.$item->id_siswa) ?>">Ubah</a> <a onclick="konfirmasi(<?php echo $item->id_siswa; ?>)">Hapus</a></th>
+            <th><a class="btn btn-success" href="<?php echo base_url('siswa/ubah/'.$item->id_siswa) ?>">Ubah</a> <a class="btn btn-danger" onclick="konfirmasi(<?php echo $item->id_siswa; ?>)">Hapus</a></th>
           </tr>
           <?php
           $i++;

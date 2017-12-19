@@ -40,7 +40,7 @@
           <tr>
             <th><?php echo $i; ?></th>
             <th><?php echo $item->angkatan; ?></th>
-            <th><a href="<?php echo base_url('angkatan/ubah/'.$item->id) ?>">Ubah</a> <a onclick="konfirmasi(<?php echo $item->id; ?>)">Hapus</a></th>
+            <th><a class="btn btn-success" href="<?php echo base_url('angkatan/ubah/'.$item->id) ?>">Ubah</a> <a class="btn btn-danger" onclick="konfirmasi(<?php echo $item->id; ?>)">Hapus</a></th>
           </tr>
           <?php
           $i++;
