@@ -27,8 +27,8 @@ Nama : <?php echo $data_siswa->nama; ?><br>
             <td><?php echo $item->kelas; ?></td>
             <td><?php echo $item->mata_pelajaran; ?></td>
             <td><?php echo $item->semester; ?></td>
-            <td><?php echo $item->waktu_ujian; ?></td>
-            <td><?php echo $item->nilai; ?></td>
+            <td><?php echo $this->pustaka->tanggal_indo($item->waktu_ujian) ?></td>
+            <td><?php echo $this->pustaka->dec_to_int($item->nilai) ?></td>
           </tr>
           <?php
           $i++;
