@@ -46,8 +46,8 @@
           ?>
           <tr>
             <th><?php echo $i; ?></th>
-            <th><?php echo $item->waktu_ujian; ?></th>
-            <th><?php echo $item->nilai; ?></th>
+            <td><?php echo $this->pustaka->tanggal_indo($item->waktu_ujian) ?></td>
+            <td><?php echo $this->pustaka->dec_to_int($item->nilai) ?></
           </tr>
           <?php
           $i++;
