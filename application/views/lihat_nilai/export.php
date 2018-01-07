@@ -70,7 +70,7 @@ for ($j=1; $j <= 6; $j++) {
   </tr>
   <tr>
     <td class="tg-x5m0" colspan="2">Rata-Rata Nilai<br></td>
-    <td class="tg-yw4l"><?php echo $rata; ?></td>
+    <td class="tg-yw4l"><?php echo floor($rata); ?></td>
     <td class="tg-yw4l"><?php echo ucwords($this->pustaka->terbilang($rata)); ?><br></td>
   </tr>
 </table>
