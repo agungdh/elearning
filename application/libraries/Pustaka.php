@@ -53,6 +53,34 @@ class Pustaka {
 	  	return $hasil;
 	}
 
+	function terbilang_core($x)
+	{
+	  $abil = array("", "satu", "dua", "tiga", "empat", "lima", "enam", "tujuh", "delapan", "sembilan", "sepuluh", "sebelas");
+	  if ($x < 12)
+	    return " " . $abil[$x];
+	  elseif ($x < 20)
+	    return $this->terbilang_core($x - 10) . " belas";
+	  elseif ($x < 100)
+	    return $this->terbilang_core($x / 10) . " puluh" . $this->terbilang_core($x % 10);
+	  elseif ($x < 200)
+	    return " seratus" . $this->terbilang_core($x - 100);
+	  elseif ($x < 1000)
+	    return $this->terbilang_core($x / 100) . " ratus" . $this->terbilang_core($x % 100);
+	  elseif ($x < 2000)
+	    return " seribu" . $this->terbilang_core($x - 1000);
+	  elseif ($x < 1000000)
+	    return $this->terbilang_core($x / 1000) . " ribu" . $this->terbilang_core($x % 1000);
+	  elseif ($x < 1000000000)
+	    return $this->terbilang_core($x / 1000000) . " juta" . $this->terbilang_core($x % 1000000);
+	}
+
+	function terbilang($x) {
+		if ($x == 0){
+			return "nol";
+		} else{
+			return $this->terbilang_core($x);
+		}
+	}
 }
 
 ?>
