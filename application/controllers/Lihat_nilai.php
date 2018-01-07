@@ -16,33 +16,31 @@ class Lihat_nilai extends CI_Controller {
 
 		if ($this->input->post('nis') != null) {
 			$this->load->view("lihat_nilai/index");
-			$data_nilai = $this->m_lihat_nilai->ambil_tabel_nilai($this->input->post('nis'));	
+			for ($i=1; $i <=6 ; $i++) { 
+				$data_nilai[$i] = $this->m_lihat_nilai->ambil_tabel_nilai($this->input->post('nis'),$i);
+			}
 			$data_siswa = $this->m_lihat_nilai->ambil_data_siswa($this->input->post('nis'));
 			if ($data_siswa == null) {
 				redirect(base_url("lihat_nilai"));
 			}	
-			$this->load->view("lihat_nilai/lihat", array("data_nilai" => $data_nilai, "data_siswa" => $data_siswa));
+			$this->load->view("lihat_nilai/lihat", array("data_nilai" => array(null, $data_nilai[1], $data_nilai[2], $data_nilai[3], $data_nilai[4], $data_nilai[5], $data_nilai[6]), "data_siswa" => $data_siswa));
 		} else {
 			$this->load->view("lihat_nilai/index");
 		}
 	}
 
 	public function export($nis) {	
-		$data_nilai = $this->m_lihat_nilai->ambil_tabel_nilai($nis);	
+		for ($i=1; $i <=6 ; $i++) { 
+				$data_nilai[$i] = $this->m_lihat_nilai->ambil_tabel_nilai($nis,$i);
+		}
 		$data_siswa = $this->m_lihat_nilai->ambil_data_siswa($nis);
-		
-		// Load all views as normal
-		$this->load->view("lihat_nilai/export", array("data_nilai" => $data_nilai, "data_siswa" => $data_siswa));
-		// Get output html
+		$this->load->view("lihat_nilai/export", array("data_nilai" => array(null, $data_nilai[1], $data_nilai[2], $data_nilai[3], $data_nilai[4], $data_nilai[5], $data_nilai[6]), "data_siswa" => $data_siswa));
+
 		$html = $this->output->get_output();
-		
-		// Load library
 		$this->load->library('dompdf_gen');
-		
-		// Convert to PDF
 		$this->dompdf->load_html($html);
 		$this->dompdf->render();
-		$this->dompdf->stream("welcome.pdf");		
+		$this->dompdf->stream("Nilai_".$data_siswa->nis."_".$data_siswa->nama.".pdf");		
 	}
 
 }

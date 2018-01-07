@@ -30,12 +30,13 @@ class M_lihat_nilai extends CI_Model{
 		$query = $this->db->query($sql, array($id_ujian));
 	}	
 
-	function ambil_tabel_nilai($nis){
+	function ambil_tabel_nilai($nis, $semester){
 		$sql = "SELECT *
 		FROM v_tabel_ujian
 		WHERE nis = ?
+		AND semester = ?
 		AND nilai IS NOT NULL";
-		$query = $this->db->query($sql, array($nis));
+		$query = $this->db->query($sql, array($nis, $semester));
 		$row = $query->result();
 
 		return $row;

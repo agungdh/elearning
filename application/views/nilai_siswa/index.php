@@ -10,6 +10,7 @@
 <div class="box box-primary">
   <div class="box-header with-border">
     <h4><strong><font color=blue>NILAI SISWA</font></strong></h4>
+    <a class="btn btn-success" href="<?php echo base_url("lihat_nilai/export/".$this->session->username); ?>">Export PDF</a>
   </div><!-- /.box-header -->
 
     <div class="box-body">
