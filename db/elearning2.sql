@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 19, 2017 at 07:56 AM
+-- Generation Time: Jan 07, 2018 at 08:12 AM
 -- Server version: 10.1.25-MariaDB
 -- PHP Version: 5.6.31
 
@@ -789,7 +789,20 @@ INSERT INTO `banksoal` (`id`, `id_mapel`, `soal`) VALUES
 (207, 14, 'Mengapa peralatan elektronik dianjurkan tidak terkena air laut'),
 (208, 14, 'Penyebab ponsel yang paling rawan mengalami kerusakan berat adalah karena, kecuali'),
 (209, 14, 'Jangan tinggalkan kaset didalam camcorder anda saat tidak digunakan. Karena'),
-(210, 14, 'Tujuan dari defrag flash disk adalah');
+(210, 14, 'Tujuan dari defrag flash disk adalah'),
+(211, 19, 'Berikut ini yang bukan merupakan sub proses produksi multimedia adalah'),
+(212, 19, 'Mempersiapkan segala sesuatu agar proses produksi dapat berjalan sesuai dengan konsep merupakan tujuan dari tahapan ?'),
+(213, 19, 'Tahapan yang paling utama dalam proses penuangan ide proposal adalah ?'),
+(214, 19, 'menentukan lingkup proyek merupakan bagian dari ?'),
+(215, 19, 'berikut ini yang bukan merupakan bagian dari pengujian adalah ?'),
+(216, 19, 'berikut ini salah satu bagian dari story board adalah ?'),
+(217, 19, 'doom type game, nonprofit website. Merupakan bagian dari ?'),
+(218, 19, 'Urutan alir proses produksi multimedia yang benar adalah ?'),
+(219, 19, 'Membuat Storyboard adalah salah satu proses dalam produksi multimedia, proses tersebut masuk kedalam'),
+(220, 19, 'Salah satu software pengolah gambar vektor adalah'),
+(221, 19, 'Proses awal dari proses produksi produk multimedia dinamakan'),
+(222, 19, 'Rincian perkiraan jumlah total pemasukan dan pengeluaran dipaparkan dalam proposal pada bagian'),
+(223, 19, 'Merupakan coretan gambar/sketsa seperti gambar komik yang menggambarkan kejadian dalam film, disebut');
 
 -- --------------------------------------------------------
 
@@ -851,7 +864,27 @@ INSERT INTO `detil_kelas` (`id`, `id_kelas`, `id_siswa`) VALUES
 (84, 19, 16),
 (85, 19, 17),
 (86, 19, 18),
-(87, 19, 19);
+(87, 19, 19),
+(88, 20, 16),
+(89, 20, 17),
+(90, 20, 18),
+(91, 20, 19),
+(92, 20, 20),
+(93, 20, 21),
+(94, 20, 22),
+(95, 20, 23),
+(96, 20, 24),
+(97, 20, 25),
+(107, 22, 16),
+(108, 22, 17),
+(109, 22, 18),
+(110, 22, 19),
+(111, 22, 20),
+(112, 22, 21),
+(113, 22, 22),
+(114, 22, 23),
+(115, 22, 24),
+(116, 22, 25);
 
 -- --------------------------------------------------------
 
@@ -1130,7 +1163,59 @@ INSERT INTO `jawaban_banksoal` (`id`, `id_banksoal`, `jawaban`, `status`) VALUES
 (833, 210, 'agar kinerja flashdisk kita lebih optimal', 1),
 (834, 210, 'agar mudah digunakan kembali', 0),
 (835, 210, 'agar terhindar virus', 0),
-(836, 210, 'agar struktur data bisa diatur', 0);
+(836, 210, 'agar struktur data bisa diatur', 0),
+(837, 211, 'Planing-Production', 1),
+(838, 211, 'Pre-Production', 0),
+(839, 211, 'Production', 0),
+(840, 211, 'Post-Production', 0),
+(841, 212, 'Pre-Production', 1),
+(842, 212, 'Planing-Production', 0),
+(843, 212, 'post production', 0),
+(844, 212, 'Production', 0),
+(845, 213, 'title goals', 1),
+(846, 213, 'audience', 0),
+(847, 213, 'title genre', 0),
+(848, 213, 'marketing', 0),
+(849, 214, 'storyboard', 1),
+(850, 214, 'penganggaran', 0),
+(851, 214, 'penjadwalan', 0),
+(852, 214, 'aset manajemen', 0),
+(853, 215, 'Pengujian Perangkat lunak', 1),
+(854, 215, 'pengujian user', 0),
+(855, 215, 'pengujian konten', 0),
+(856, 215, 'pengujian fungsional', 0),
+(857, 216, 'menentukan lingkup proyek', 1),
+(858, 216, 'konten ahli', 0),
+(859, 216, 'konten produksi', 0),
+(860, 216, 'konten akuisisi', 0),
+(861, 217, 'title genre', 1),
+(862, 217, 'marketing requirements', 0),
+(863, 217, 'schedule ', 0),
+(864, 217, 'budget parameters', 0),
+(865, 218, 'Pre Production - Production - Post Production', 1),
+(866, 218, 'Production - Pre Production - Post Production', 0),
+(867, 218, 'Post Production - Pre Production - Production', 0),
+(868, 218, 'Pre Production - Post Production - Production', 0),
+(869, 219, 'Pre Production ', 1),
+(870, 219, 'Post Production', 0),
+(871, 219, 'Production', 0),
+(872, 219, 'Perancangan', 0),
+(873, 220, 'Adobe Photoshop', 1),
+(874, 220, 'Adobe Dreamwaver', 0),
+(875, 220, 'Adobe Ilustrator', 0),
+(876, 220, 'Adobe Premiere', 0),
+(877, 221, 'Pre-Production', 1),
+(878, 221, 'Distribution', 0),
+(879, 221, 'Post-production', 0),
+(880, 221, 'Production', 0),
+(881, 222, 'Anggaran Biaya', 1),
+(882, 222, 'Pendahuluan', 0),
+(883, 222, 'Latar Belakang Masalah', 0),
+(884, 222, 'Skenario', 0),
+(885, 223, 'storyboard', 1),
+(886, 223, 'Skenario', 0),
+(887, 223, 'Proposal', 0),
+(888, 223, 'Concept Definition', 0);
 
 -- --------------------------------------------------------
 
@@ -1160,7 +1245,9 @@ INSERT INTO `kelas` (`id`, `id_angkatan`, `id_guru`, `id_mapel`, `kelas`, `seles
 (16, 8, 5, 16, 'PPC 1B', 0),
 (17, 8, 6, 14, 'PPM 1A', 0),
 (18, 8, 6, 14, 'PPM 1B', 0),
-(19, 8, 6, 14, 'PPM test', 0);
+(19, 8, 6, 14, 'PPM test', 0),
+(20, 8, 2, 18, 'artak iseng', 0),
+(22, 8, 6, 19, 'tambahan', 0);
 
 -- --------------------------------------------------------
 
@@ -1183,7 +1270,8 @@ INSERT INTO `mapel` (`id`, `id_guru`, `semester`, `mata_pelajaran`) VALUES
 (14, 6, '2', 'Perawatan Peralatan Multimedia'),
 (16, 5, '1', 'Perakitan Personal Komputer'),
 (17, 2, '1', 'Etimologi Multimedia'),
-(18, 2, '1', 'Alir Proses Produksi Multimedia');
+(18, 2, '1', 'Alir Proses Produksi Multimedia'),
+(19, 6, '4', 'tambahan');
 
 -- --------------------------------------------------------
 
@@ -1246,7 +1334,7 @@ CREATE TABLE `ujian` (
   `id_kelas` int(11) NOT NULL,
   `id_siswa` int(11) NOT NULL,
   `waktu_ujian` datetime NOT NULL,
-  `nilai` float(11,2) DEFAULT NULL
+  `nilai` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -1254,12 +1342,14 @@ CREATE TABLE `ujian` (
 --
 
 INSERT INTO `ujian` (`id`, `id_kelas`, `id_siswa`, `waktu_ujian`, `nilai`) VALUES
-(14, 15, 18, '2017-12-07 10:03:35', 0.00),
-(15, 17, 18, '2017-12-07 10:22:16', 0.00),
-(16, 12, 18, '2017-12-08 08:56:56', 10.00),
-(17, 17, 16, '2017-12-09 13:29:10', 0.00),
-(18, 19, 18, '2017-12-11 10:41:13', 0.00),
-(19, 19, 16, '2017-12-19 07:34:16', 30.00);
+(14, 15, 18, '2017-12-07 10:03:35', 0),
+(15, 17, 18, '2017-12-07 10:22:16', 0),
+(16, 12, 18, '2017-12-08 08:56:56', 10),
+(17, 17, 16, '2017-12-09 13:29:10', 0),
+(18, 19, 18, '2017-12-11 10:41:13', 0),
+(19, 19, 16, '2017-12-19 07:34:16', 30),
+(20, 20, 16, '2017-12-20 21:13:21', 20),
+(22, 22, 18, '2018-01-07 14:08:43', 20);
 
 -- --------------------------------------------------------
 
@@ -1338,7 +1428,27 @@ INSERT INTO `ujian_soal` (`id`, `id_ujian`, `id_banksoal`, `id_jawaban`) VALUES
 (217, 19, 201, NULL),
 (218, 19, 209, 832),
 (219, 19, 203, 805),
-(220, 19, 206, 817);
+(220, 19, 206, 817),
+(221, 20, 94, 372),
+(222, 20, 105, 413),
+(223, 20, 96, 377),
+(224, 20, 101, NULL),
+(225, 20, 92, NULL),
+(226, 20, 97, NULL),
+(227, 20, 103, NULL),
+(228, 20, 100, NULL),
+(229, 20, 91, NULL),
+(230, 20, 93, NULL),
+(246, 22, 218, 865),
+(247, 22, 223, 888),
+(248, 22, 212, 842),
+(249, 22, 221, 877),
+(250, 22, 219, NULL),
+(251, 22, 215, NULL),
+(252, 22, 220, NULL),
+(253, 22, 216, NULL),
+(254, 22, 222, NULL),
+(255, 22, 214, NULL);
 
 -- --------------------------------------------------------
 
@@ -1554,7 +1664,7 @@ CREATE TABLE `v_tabel_ujian` (
 `id_ujian` int(11)
 ,`waktu_ujian` datetime
 ,`unix_waktu_ujian` bigint(17)
-,`nilai` float(11,2)
+,`nilai` int(11)
 ,`deadline` datetime
 ,`unix_deadline` bigint(17)
 ,`id_kelas` int(11)
@@ -1798,12 +1908,12 @@ ALTER TABLE `angkatan`
 -- AUTO_INCREMENT for table `banksoal`
 --
 ALTER TABLE `banksoal`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=211;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=224;
 --
 -- AUTO_INCREMENT for table `detil_kelas`
 --
 ALTER TABLE `detil_kelas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=88;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=117;
 --
 -- AUTO_INCREMENT for table `guru`
 --
@@ -1813,17 +1923,17 @@ ALTER TABLE `guru`
 -- AUTO_INCREMENT for table `jawaban_banksoal`
 --
 ALTER TABLE `jawaban_banksoal`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=837;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=889;
 --
 -- AUTO_INCREMENT for table `kelas`
 --
 ALTER TABLE `kelas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 --
 -- AUTO_INCREMENT for table `mapel`
 --
 ALTER TABLE `mapel`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 --
 -- AUTO_INCREMENT for table `siswa`
 --
@@ -1833,12 +1943,12 @@ ALTER TABLE `siswa`
 -- AUTO_INCREMENT for table `ujian`
 --
 ALTER TABLE `ujian`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 --
 -- AUTO_INCREMENT for table `ujian_soal`
 --
 ALTER TABLE `ujian_soal`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=221;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=261;
 --
 -- AUTO_INCREMENT for table `user`
 --
